@@ -67,7 +67,7 @@ Below details the workflow that developers should adhere to during development. 
         |---|---|---|---|---|
         |1|Navigate to contact us|When an existing user .... |1. 2. 3.|url="..."|
 ## Development & Git
-- During Sprint Planning
+- During Sprint 
     1. Assign the issue to a repository
     2. Estimate the issue size
     3. Add a priority
@@ -149,10 +149,12 @@ Below details our CI/CD strategy as well as our communications strategy.
 - Scrum/Team processes
     - Sprint Planning (Date tbd)
         - Team to discuss resources available, sprint goals, sprint backlog issues 
+        - Scrum board to be documented
     - Sprint Review (Date tbd)
         - Team to walkthrough their issue, demo their code and address the Product Owner
         - Code walkthrough can be done after PO leaves
         - Code should be merged into main and deployed in the live environment
+        - Scrum board to be documented
     - Sprint Retrospective (Date tbd)
         - Retrotools
         - Actionable points should be documented and worked on in next sprint
