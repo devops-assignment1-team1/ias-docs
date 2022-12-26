@@ -2,6 +2,7 @@
 This is the workflow docs for DevOps Oct2022 Team 1. It details the roles of the team members as well as the scrum and development processes that we adhere to.
 
 - [Introduction](#introduction)
+  * [Project Documentation](#project-documentation)
   * [Team Members & Roles](#team-members---roles)
   * [Software & Tools](#software---tools)
   * [Tech Stack & Dependencies](#tech-stack---dependencies)
@@ -12,15 +13,23 @@ This is the workflow docs for DevOps Oct2022 Team 1. It details the roles of the
   * [Pull Requests](#pull-requests)
   * [Completing Issues](#completing-issues)
 - [Automation and Communication](#automation-and-communication)
-  * [Deployment Strategy](#deployment-strategy)
-  * [Delivery Strategy](#delivery-strategy)
+  * [CICD Strategy](#cicd-strategy)
+  * [Monitoring Strategy](#monitoring-strategy)
+  * [Test Metrics](#test-metrics)
   * [Communications Strategy](#communications-strategy)
 - [Misc](#misc)
   * [Git Strategy](#git-strategy)
-  * [CI/CD](#ci-cd)
   * [Adjusting to Changing Requirements](#adjusting-to-changing-requirements)
-  * [Scrum & Processes](#scrum---processes)
-- [Pipelines](#pipelines)
+  * [Scrum & Processes (IGNORE)](#scrum---processes--ignore-)
+
+## Project Documentation
+Files/Links for technical doucmentation
+| Name |  Link |
+|---|---|
+Technical Requirement Specifications | google doc
+Solution Architecture | lucidchart 
+Wireframe | Figma
+
 ## Team Members & Roles
 All team members will have to partake in development work
 | Name | Role | Description |
@@ -41,7 +50,6 @@ Balqis | Developer | Development and more development
 | Name | Description | Link |
 |---|---|---|
 |Javascript|Backend Language|https://www.javascript.com/|
-|ReactJS|Frontend Library|https://reactjs.org/|
 |ExpressJS|Backend Framework|https://expressjs.com/|
 |Jest|Javascript Testing Framework|https://jestjs.io/|
 |MySQL|Relational Database|https://www.mysql.com/|
@@ -62,10 +70,10 @@ Below details the workflow that developers should adhere to during development. 
     1. Test cases will be created for each user story
         - These tests should be integration or system tests (not unit tests)
         - These test cases should be done in a word document in teams
-    2. Test cases should follow the below format
-        | ID | Name | Description | Value/Steps | Result |
+    2. Test cases should follow the following format
+        | ID (User Story . No)| Name | Description | Value/Steps | Result |
         |---|---|---|---|---|
-        |1|Navigate to contact us|When an existing user .... |1. 2. 3.|url="..."|
+        |1.1|Navigate to contact us|When an existing user .... |1. 2. 3.|url="..."|
 ## Development & Git
 - During Sprint 
     1. Assign the issue to a repository
@@ -77,8 +85,8 @@ Below details the workflow that developers should adhere to during development. 
     3. In the event a new branch is needed, use the same issue number (e.g. 25-new locking mechanism)
     4. Under the description section of each issue, add comments to update the progress of your issue. Developers should only comment important information that is relevant to share to the team. (Subjective, don't put insignificant stuff)
 - TDD
-    1. Development will be done using a TDD approach (Unit Tests)
-    2. Integration and System tests will be introduced after the completion of the relevant features
+    1. Development will be done using a Ping Pong Programming approach
+    2. Integration and System tests will be introduced after the completion of the relevant features/milestone
 - Merge Strategy
     1. Development of enhancements or bugs will be done in their respective branches and merged back into main when completed. 
 ## Pull Requests
@@ -111,26 +119,38 @@ Below details the workflow that developers should adhere to during development. 
 # Automation and Communication
 Below details our CI/CD strategy as well as our communications strategy.
 
-## CI Strategy
+## CICD Strategy
 - CI
-    - On push onto development branches
-        - Build test, Unit Test 
-    - On push/pull request onto main
-        - Build test, Unit Test, Integration Test, System Test
-        
-## Delivery Strategy
-- Main will be delivered to relevant stakeholders on a weekly basis
-- On acceptance of code, main will be merged into prod
+    - On push to development branches
+        - Unit Test 
+    - On push/pull request to main
+        - Unit Test, Integration Test, System Test
+- CDelivery
+    - On push of tag (development milestone release)
+        - Unit Test, Integration Test, System Test > Output Report
+        - Zip code and report, send to client via email
+- (After client approves development milestone release, PR to prod, merge)
+- CDeployment
+    - On push to prod 
+        - Unit Test, Integration Test, System Test > Output Report
+        - Save Report
+        - Tag and release
 
-## Deployment Strategy
-- Automated deployment will be done for prod on commit/merge
-- Deployment will be done in the form of github releases
-
-
+## Monitoring Strategy
+- Pipeline failures on development milestone release and production releases
+    - Dev Team (Telegram)
+- Development milestone and production release size
+    - Dev Team (Telegram)
+    
+## Test Metrics
+- Unit Tests
+    - Code coverage >= 70% 
+    - Code complexity >= 80
+- Integration Tests, Acceptance Tests
+    - Covers all test cases written by QAs
 
 ## Communications Strategy
-- Project information will be documented in github projects 
-- Documentation will be done in teams files
+- Project information will be documented in github projects and relevant repos
 - Teams will be used for video conferencing
 - Telegram will be used for quick texting
 - Emails will be used to communicate with relevant stakeholders
@@ -142,7 +162,7 @@ Below details our CI/CD strategy as well as our communications strategy.
 ## Adjusting to Changing Requirements
 - If requirements are changed and there is a need to reprioritize the issues, the scrum master and tech lead will review the process of the ongoing sprint and decide to either finish the sprint or introduce new issues.
 - The scrum master and tech lead will brief the team on the updated requirements and how/when the team will be taking them on 
-## Scrum & Processes
+## Scrum & Processes (IGNORE)
 - Working as a team to accomplish sprint goals
     - As a scrum team, the goal of the sprint is to finish the issues in the sprint backlog so members should be helping each other out instead of taking on tasks that are out of scope
     - It is encouraged to seek help from each other when needed not only to improve efficiency but also understanding of the different aspects of the project
@@ -169,39 +189,3 @@ Below details our CI/CD strategy as well as our communications strategy.
         - Hopefully we have time to organise a lunch
 - Scrum board
     - Done using Github Projects
-# Pipelines
-### CI Push WB
-- On Push
-    - To any Working Branch
-- Run build tests
-- Run unit tests 
-### CI PR Main
-- On PR
-    -To Main
-- Run build tests
-- Run unit tests & integration tests
-- Create issue if fail
-### CI Push Main
-- On Push
-    - To Main
-- Run build tests
-- Run unit tests & integration tests
-- Generate report
-- Upload report 
-### CDelivery PR Prod
-- On PR
-    - To Prod
-- Run build tests
-- Run unit tests & Integration tests
-- Generate report
-- Label size of PR
-- Zip report and source code
-- Notify stakeholder with message and artefacts via telegram
-### CDeploy Push Prod
-- On Push
-    - To Prod
-- Run build tests
-- Run unit tests & Integration tests
-- Generate Report
-- Deploy new code
-- Notify stakeholder with message and artefacts via telegram
