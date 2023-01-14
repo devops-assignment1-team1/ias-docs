@@ -67,13 +67,14 @@ Below details the workflow that developers should adhere to during development. 
      1. Add in the Requirements section
      2. Add in the Pull Requests section
 - Creating Test Cases
-    1. Test cases will be created for each user story
+    1. Test cases will be created for each user story that is worked on during that sprint
         - These tests should be integration or system tests (not unit tests)
         - These test cases should be done in a word document in teams
     2. Test cases should follow the following format
         | ID (User Story . No)| Name | Description | Value/Steps | Result |
         |---|---|---|---|---|
         |1.1|Navigate to contact us|When an existing user .... |1. 2. 3.|url="..."|
+    3. A manual test will be conducted before sprint review and if there are no issues it will be converted to integration tests in the subsequent sprint
 ## Development & Git
 - During Sprint 
     1. Assign the issue to a repository
