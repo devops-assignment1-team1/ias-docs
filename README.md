@@ -79,15 +79,15 @@ Below details the workflow that developers should adhere to during development. 
 - During Sprint Planning
     1. Assign the issue to a repository
     2. Estimate the issue size
-    3. Add a priority
 - Starting Development & Branching Issues
-    1. Create a branch from the issue and use it for development (e.g. 25-develop locking mechanism)
-    2. Assign the issue to yourself and move it to "In Progress"
-    3. In the event a new branch is needed, use the same issue number (e.g. 25-new locking mechanism)
-    4. Under the description section of each issue, add comments to update the progress of your issue. Developers should only comment important information that is relevant to share to the team. (Subjective, don't put insignificant stuff)
+    1. Read and fill out the requirements for the issue
+    2. Create a branch from the issue and use it for development (e.g. 25-develop locking mechanism)
+    3. Assign the issue to yourself and move it to "In Progress"
+    4. In the event a new branch is needed, use the same issue number (e.g. 25-new locking mechanism)
+    5. Under the description section of each issue, add comments to update the progress of your issue. Developers should only comment important information that is relevant to share to the team. (Subjective, don't put insignificant stuff)
 - TDD
     1. Development will be done using a Ping Pong Programming approach
-    2. Integration and System tests will be introduced after the completion of the relevant features/milestone
+    2. Integration and System tests will be introduced after every sprint
 - Merge Strategy
     1. Development of enhancements or bugs will be done in their respective branches and merged back into main when completed. 
 ## Pull Requests
@@ -104,7 +104,7 @@ Below details the workflow that developers should adhere to during development. 
     1. Ensure that all code is merged into main and working
     2. Ensure that the issue has been updated 
         - Requirements, Pull Requests, Comments/Updates
-    3. Move the issue to "In Review" (Max 2 days before Sprint Review)
+    3. Move the issue to "In Review" (Max 1 days before Sprint Review)
 - Reviewing Issues
     1. Review the requriements of the issue
     2. Verify that the code has been merged into main, deployed and working
@@ -120,35 +120,13 @@ Below details the workflow that developers should adhere to during development. 
 # Automation and Communication
 Below details our CI/CD strategy as well as our communications strategy.
 
-## CICD Strategy
-- CI
-    - On push to development branches
-        - Unit Test 
-    - On push/pull request to main
-        - Unit Test, Integration Test, System Test
-- CDelivery
-    - On push of tag (development milestone release)
-        - Unit Test, Integration Test, System Test > Output Report
-        - Zip code and report, send to client via email
-- (After client approves development milestone release, PR to prod, merge)
-- CDeployment
-    - On push to prod 
-        - Unit Test, Integration Test, System Test > Output Report
-        - Save Report
-        - Tag and release
-
-## Monitoring Strategy
-- Pipeline failures on development milestone release and production releases
-    - Dev Team (Telegram)
-- Development milestone and production release size
-    - Dev Team (Telegram)
-    
+## CICD Strategy && Monitoring Strategy
+ 
 ## Test Metrics
-- Unit Tests
-    - Code coverage >= 70% 
-    - Code complexity >= 80
-- Integration Tests, Acceptance Tests
-    - Covers all test cases written by QAs
+- Unit Tests & Intgeration Tests
+    - 100% Pass
+- SonarQube Quality Gate
+  - 
 
 ## Communications Strategy
 - Project information will be documented in github projects and relevant repos
@@ -163,20 +141,20 @@ Below details our CI/CD strategy as well as our communications strategy.
 ## Adjusting to Changing Requirements
 - If requirements are changed and there is a need to reprioritize the issues, the scrum master and tech lead will review the process of the ongoing sprint and decide to either finish the sprint or introduce new issues.
 - The scrum master and tech lead will brief the team on the updated requirements and how/when the team will be taking them on 
-## Scrum & Processes (IGNORE)
+## Scrum & Processes 
 - Working as a team to accomplish sprint goals
     - As a scrum team, the goal of the sprint is to finish the issues in the sprint backlog so members should be helping each other out instead of taking on tasks that are out of scope
     - It is encouraged to seek help from each other when needed not only to improve efficiency but also understanding of the different aspects of the project
 - Scrum/Team processes
-    - Sprint Planning (Date tbd)
+    - Sprint Planning (Thursday)
         - Team to discuss resources available, sprint goals, sprint backlog issues 
         - Scrum board to be documented
-    - Sprint Review (Date tbd)
+    - Sprint Review (Wednesday)
         - Team to walkthrough their issue, demo their code and address the Product Owner
         - Code walkthrough can be done after PO leaves
-        - Code should be merged into main and deployed in the live environment
+        - Code should be merged into main and deployed in the live environment 
         - Scrum board to be documented
-    - Sprint Retrospective (Date tbd)
+    - Sprint Retrospective (Wednesday)
         - Retrotools
         - Actionable points should be documented and worked on in next sprint
     - Technical Backlog Refinement
