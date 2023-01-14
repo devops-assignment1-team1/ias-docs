@@ -76,7 +76,7 @@ Below details the workflow that developers should adhere to during development. 
         |1.1|Navigate to contact us|When an existing user .... |1. 2. 3.|url="..."|
     3. A manual test will be conducted before sprint review and if there are no issues it will be converted to integration tests in the subsequent sprint
 ## Development & Git
-- During Sprint 
+- During Sprint Planning
     1. Assign the issue to a repository
     2. Estimate the issue size
     3. Add a priority
