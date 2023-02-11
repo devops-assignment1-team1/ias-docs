@@ -23,12 +23,13 @@ This is the workflow docs for DevOps Oct2022 Team 1. It details the roles of the
   * [Scrum & Processes (IGNORE)](#scrum---processes--ignore-)
 
 ## Project Documentation
-Files/Links for technical doucmentation
+Files/Links for technical documentation
 | Name |  Link |
 |---|---|
 Technical Requirement Specifications | google doc
 Solution Architecture | lucidchart 
 Wireframe | Figma
+Test Cases | MS Word
 
 ## Team Members & Roles
 All team members will have to partake in development work
@@ -71,9 +72,9 @@ Below details the workflow that developers should adhere to during development. 
         - These tests should be integration or system tests (not unit tests)
         - These test cases should be done in a word document in teams
     2. Test cases should follow the following format
-        | ID (User Story . No)| Name | Description | Value/Steps | Result |
-        |---|---|---|---|---|
-        |1.1|Navigate to contact us|When an existing user .... |1. 2. 3.|url="..."|
+        | ID (User Story . No)| Module | Scenario | Description | Value/Steps | Result |
+        |---|---|---|---|---|---|
+        |As a user I want to ... so that ..., T-1 |Modules involved in test case|Action performed by user for an output|This test case is to verify/ensure that ...|1. 2. 3.|The website should ...
     3. A manual test will be conducted before sprint review and if there are no issues it will be converted to integration tests in the subsequent sprint
 ## Development & Git
 - During Sprint Planning
