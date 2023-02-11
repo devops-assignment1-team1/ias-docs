@@ -29,7 +29,7 @@ Files/Links for technical documentation
 Technical Requirement Specifications | google doc
 Solution Architecture | lucidchart 
 Wireframe | Figma
-Test Cases | MS Word
+Integration Test Cases | MS Word
 
 ## Team Members & Roles
 All team members will have to partake in development work
@@ -54,6 +54,7 @@ Balqis | Developer | Development and more development
 |ExpressJS|Backend Framework|https://expressjs.com/|
 |Jest|Javascript Testing Framework|https://jestjs.io/|
 |MySQL|Relational Database|https://www.mysql.com/|
+|Selenium|Web Application Automator|https://www.selenium.dev/|
 
 # Development & Scrum Workflow
 Below details the workflow that developers should adhere to during development. It is ordered sequentially.
