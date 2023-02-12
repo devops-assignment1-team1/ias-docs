@@ -127,8 +127,13 @@ Below details our CI/CD strategy as well as our communications strategy.
 ## Test Metrics
 - Unit Tests & Intgeration Tests
     - 100% Pass
-- SonarQube Quality Gate
-  - 
+- SonarCloud Quality Gate (to pass)
+  - Test Coverage > 80.0%
+  - Duplicate Lines < 3.0%
+  - Maintainabbility Rating (Code Smell) > A
+  - Reliability Rating (Bugs) > A
+  - Securty Hotspots Reviewed > 100.0%
+  - Secruity Rating (Vulnerabilities) > A
 
 ## Communications Strategy
 - Project information will be documented in github projects and relevant repos
