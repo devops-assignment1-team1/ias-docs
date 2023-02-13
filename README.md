@@ -76,7 +76,7 @@ Below details the workflow that developers should adhere to during development. 
         | ID (User Story • No.)| Module | Scenario | Description | Value/Steps | Result |
         |---|---|---|---|---|---|
         |As a user I want to ... so that ... • T-1 |Modules involved in test case|Action performed by user for an output|This test case is to verify/ensure that ...|1. 2. 3.|The website should ...
-    3. A manual test will be conducted before sprint review and if there are no issues it will be converted to integration tests in the subsequent sprint
+    3. Test cases will be conducted before sprint review and if there are no issues, manual & integration tests in the subsequent sprint
 ## Development & Git
 - During Sprint Planning
     1. Assign the issue to a repository
